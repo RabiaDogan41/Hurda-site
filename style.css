@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+header {
+    position: absolute;
+    background-color: transparent; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+header .navbar {
+    padding:10px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+header .navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    gap: 48px;
+}
+
+header .navbar ul li {
+    margin: 0 15px;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+header .navbar ul li a {
+    border: 2px solid rgb(255, 255, 255);
+    padding: 5px 15px; 
+    min-width: 120px; 
+    text-align: center; 
+    display: inline-block; 
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    transition: color 0.3s ease;
+    margin-top:10px;
+    background-color: transparent;
+}
+
+header .navbar ul li a:hover {
+  color:#d2b510 ;
+  border: 2px solid #d2b510;  
+  transition: 0.s;
+}
+
+
+header .menu-icon {
+    display: none; 
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10rem;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+header .menu-icon:hover {
+    color: #ff6f61;
+}
+.banner {
+    width: 100%;
+    height: 100vh; 
+    background-size: cover; 
+    background-position: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    position: relative; 
+    overflow: hidden; 
+}
+
+.banner::before {
+    content: "";
+    background-image: url('/images/background2.webp'); 
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; 
+    filter: blur(1.5px) brightness(50%); 
+}
+
+.banner-content {
+    color: white;
+    padding: 20px;
+    border: 3px solid white;
+    max-width: 90%; 
+    margin: 0 auto; 
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.banner-content p {
+    font-size: 1.8rem;
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.about-us {
+    width: 100%;
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.about-text {
+    flex: 1;
+    width: 90%;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: "EB Garamond", serif;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    font-family: "Roboto", sans-serif;
+}
+
+.about-image {
+    flex: 1;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+
+.hizmetlerimiz-hurda {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    margin: 20px;
+}
+
+.hizmet {
+    border: 2px solid black;
+    padding: 30px;
+    width: 30%;
+    box-sizing: border-box;
+    margin: 20px;
+}
+
+.hizmet-baslik {
+    display: flex;
+    justify-content: center;
+}
+
+.hizmet-baslik h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.hizmet ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hizmet ul li {
+    flex: 1 1 20%;
+    margin: 5px;
+    border: 1px dotted black;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+
+footer {
+    background-color: #d2b510;
+    color: black;
+    padding: 20px 0;
+    border-top: 2px solid black;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.left-footer, .right-footer {
+    flex: 1;
+    min-width: 300px;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.small-text {
+    font-size: 12px;
+    font-weight: 300;
+    margin-top: 20px;
+    display: block;
+}
+
+
+
+
+.bilgilendirme {
+    display: flex;
+    flex-direction: column; /* İçeriği dikey sırala */
+    align-items: center; /* İçeriği ortala */
+    text-align: center; /* Metni ortala */
+    padding: 20px;
+    background-color: #ffffff; /* Arka plan rengi */
+}
+
+.image-bilgilendirme img {
+  
+    max-width: 50%; /* Resmi küçült */
+    height: auto; /* Oranları koru */
+    
+    margin-bottom: 20px; /* Resim ile yazı arasına boşluk ekle */
+    margin-top:100px;
+}
+
+.content-bilgilendirme h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: "EB Garamond", serif;
+}
+
+.bilgilendirme p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    font-family: "Roboto", sans-serif;
+    max-width: 800px; /* Paragraf genişliğini sınırla */
+    margin: 0 auto 20px; /* Paragraflar arası boşluk */
+}
+
+.bilgilendirme h1:last-of-type {
+    margin-top: 20px; /* Son başlık ile önceki paragraf arasına boşluk ekle */
+}
+
+
+.hizmetlerimiz {
+    display: flex;
+    flex-direction: column; /* İçeriği dikey sırala */
+    align-items: center; /* İçeriği ortala */
+    text-align: center; /* Metni ortala */
+    padding: 20px;
+    background-color: #ffffff; /* Arka plan rengi */
+}
+
+
+.image-hizmetlerimiz img {
+    max-width: 50%; /* Resmi küçült */
+    height: auto; /* Oranları koru */
+    
+    margin-bottom: 20px; /* Resim ile yazı arasına boşluk ekle */
+    margin-top:100px;
+}
+
+.content-hizmetlerimiz h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: "EB Garamond", serif;
+}
+
+.content-hizmetlerimiz p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    font-family: "Roboto", sans-serif;
+    max-width: 800px; /* Paragraf genişliğini sınırla */
+    margin: 0 auto 20px; /* Paragraflar arası boşluk */
+}
+
+/* WhatsApp İkonu Stili */
+.whatsapp-float {
+    position: fixed; /* Sabit konum */
+    bottom: 20px; /* Alttan 20px yukarıda */
+    right: 20px; /* Sağdan 20px içeride */
+    z-index: 1000; /* Diğer öğelerin üzerinde olsun */
+    width: 60px; /* İkon genişliği */
+    height: 60px; /* İkon yüksekliği */
+    background-color: #25d366; /* WhatsApp yeşili */
+    border-radius: 50%; /* Yuvarlak ikon */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Hafif gölge */
+    transition: all 0.3s ease; /* Animasyon */
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e; /* Hover rengi */
+    transform: scale(1.1); /* Hover'da büyüt */
+}
+
+.whatsapp-float img {
+    width: 40px; /* İkon boyutu */
+    height: 40px; /* İkon boyutu */
+}
+
+/*......................................HEADER İÇİN RESPONSİVE ÖZELLİKLER................................................................*/
+@media screen and (max-width: 768px) {
+    
+    header .menu-icon {
+        display: block;
+    }
+    
+    
+    header .navbar {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    
+    header .navbar.active {
+        display: flex;
+    }
+    
+    
+    header .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header .navbar ul li {
+        margin: 10px 0;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+   
+    header .menu-icon {
+        display: block;
+    }
+    
+    
+    header .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 20px 0;
+    }
+    
+
+    header .navbar.active {
+        display: flex;
+    }
+    
+
+    header .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    header .navbar ul li {
+        margin: 10px 0;
+    }
+    
+
+    header .navbar ul li a {
+        font-size: 18px;
+        padding: 5px 10px;
+        min-width: 100px;
+    }
+}
+
+
+
+
+/*.........................................BANNER İÇİN RESPONSİVE ÖZELLİKLERR......................................................*/
+
+
+@media (max-width: 768px) {
+    .banner-content h1 {
+        font-size: 2rem; 
+    }
+
+    .banner-content p {
+        font-size: 1.5rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content h1 {
+        font-size: 1.5rem; 
+    }
+
+    .banner-content p {
+        font-size: 1.2rem; 
+    }
+}
+
+
+
+
+
+
+
+
+/*...................................................ABOUT US İÇİN RESPONSİVE ........................................................*/
+
+
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column; 
+        gap: 20px;
+    }
+
+    .about-text {
+        flex: none;
+        width: 100%;
+        text-align: center; 
+    }
+    .about-image{
+        width:50%;
+        flex:none;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 2rem; 
+    }
+
+    .about-text p {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    .about-text h2 {
+        font-size: 1.8rem; 
+    }
+
+    .about-text p {
+        font-size: 0.95rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us {
+        padding: 30px 10px; 
+    }
+
+    .about-text h2 {
+        font-size: 1.5rem; 
+    }
+
+    .about-text p {
+        font-size: 0.9rem; 
+    }
+}
+
+
+/*..................................................HİZMET KISMI İÇİN RESPONSİVE KODALRI........................................................*/
+
+
+@media (max-width: 1024px) {
+    .hizmet {
+        width: 45%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .hizmet {
+        width: 100%; 
+        margin: 10px 0; 
+    }
+
+    .hizmet-baslik h1 {
+        font-size: 20px; 
+    }
+
+    .hizmet ul li {
+        flex: 1 1 45%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .hizmetlerimiz {
+        padding: 15px; 
+        margin: 10px;
+    }
+
+    .hizmet {
+        padding: 20px; 
+    }
+
+    .hizmet-baslik h1 {
+        font-size: 18px; 
+    }
+
+    .hizmet ul li {
+        flex: 1 1 100%; 
+        padding: 10px; 
+    }
+}
+
+/*................................................................FOOTER KISMI İÇİN RESPONSİVE KODLARI....................................*/
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Mobil ve tablette içeriği dikey sırala */
+        align-items: center; /* İçeriği ortala */
+    }
+
+    .left-footer, .right-footer {
+        min-width: 100%; /* Mobil cihazlarda tam genişlik */
+        text-align: center; /* Metni ortala */
+    }
+
+    h1 {
+        font-size: 20px; /* Başlık boyutunu küçült */
+    }
+
+    p {
+        font-size: 14px; /* Paragraf boyutunu küçült */
+    }
+
+    .small-text {
+        font-size: 10px; /* Küçük metin boyutunu küçült */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px; /* Daha küçük başlık boyutu */
+    }
+
+    p {
+        font-size: 12px; /* Daha küçük paragraf boyutu */
+    }
+
+    .small-text {
+        font-size: 9px; /* Daha küçük metin boyutu */
+    }
+}
+
+
+/*...........................................................Hizmetlerimiz KISMI İÇİN RESPONSİVE ..............................................*/
+
+@media (max-width: 480px) {
+    .content-hizmetlerimiz h1 {
+        font-size: 1.5rem; /* Daha küçük başlık boyutu */
+    }
+
+    .content-hizmetlerimiz p {
+        font-size: 0.9rem; /* Daha küçük paragraf boyutu */
+    }
+}
